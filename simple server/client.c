@@ -16,7 +16,7 @@
 
 #define IP "127.0.0.1"
 #define PORT 3000
-#define WRITE_DATA "Hello World!"
+#define WRITE_DATA "return this message > Hello World!"
 
 int main()
 {

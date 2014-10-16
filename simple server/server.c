@@ -54,7 +54,7 @@ int main()
         perror("recv");
         ret = -1;
     } else
-        printf("Read %d Bytes: '%s'\n", ret, readBuf);
+        write(acceptedSock, readBuf, strlen(readBuf)+1);
 
     close(acceptedSock);
 error:
