@@ -33,6 +33,7 @@ int main(int argc, char *argv[])
 		error_handling("connect() error");
 	
 	print_connected_message();
+	
 	// 쓰레드 생성
 	pthread_create(&send_thread_ID, NULL, send_msg_thread_main, (void*)&server_socket);
 	pthread_create(&receive_thread_ID, NULL, receive_msg_thread_main, (void*)&server_socket);

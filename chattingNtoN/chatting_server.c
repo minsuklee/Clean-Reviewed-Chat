@@ -50,13 +50,13 @@ int main(int argc, char *argv[])
 	server_socket=socket(PF_INET, SOCK_STREAM, 0);
 
 	// 소켓 옵션 지정
-	setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, (void *)&socket_option_value, sizeof(socket_option_value));	//
+	setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, (void *)&socket_option_value, sizeof(socket_option_value));
 
 	// 주소정보 초기화
-	memset(&server_address, 0, sizeof(server_address));	//
-	server_address.sin_family=AF_INET; 					//
-	server_address.sin_addr.s_addr=htonl(INADDR_ANY);		//
-	server_address.sin_port=htons(atoi(argv[1]));			//
+	memset(&server_address, 0, sizeof(server_address));
+	server_address.sin_family=AF_INET;
+	server_address.sin_addr.s_addr=htonl(INADDR_ANY);
+	server_address.sin_port=htons(atoi(argv[1]));
 
 	// 소켓에 IP주소와 포트번호 할당
 	if(bind(server_socket, (struct sockaddr*) &server_address, sizeof(server_address))==-1)

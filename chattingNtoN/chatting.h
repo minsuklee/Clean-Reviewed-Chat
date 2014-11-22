@@ -100,6 +100,7 @@ void print_newConnection()
 	fflush(stdout);
 }
 
+// 사용자 안내 문구
 void print_connected_message()
 {
 	fputs("\n=========== connected ============\n", stdout);
