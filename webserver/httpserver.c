@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+// 매크로 선언
 #define BUFFER_SIZE 4096
 #define PORT 9000
 #define LISTENER_QUEUE_SIZE 1024
